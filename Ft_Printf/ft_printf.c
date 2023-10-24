@@ -6,7 +6,7 @@
 /*   By: jflorido <jflorido@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 18:16:04 by jflorido          #+#    #+#             */
-/*   Updated: 2023/10/24 16:56:46 by jflorido         ###   ########.fr       */
+/*   Updated: 2023/10/24 18:40:45 by jflorido         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	ft_what_id(va_list ap, char id)
 	len = 0;
 	if (id == 'c')
 		len = ft_putchar(va_arg(ap, int));
-	else if (id == 'd')
+	else if (id == 'd' || id == 'i')
 		len = ft_putnb(va_arg(ap, int));
 	else if (id == 's')
 		len = ft_putstr(va_arg(ap, char *));
