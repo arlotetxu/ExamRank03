@@ -6,7 +6,7 @@
 /*   By: jflorido <jflorido@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 18:59:05 by jflorido          #+#    #+#             */
-/*   Updated: 2023/10/24 21:32:26 by jflorido         ###   ########.fr       */
+/*   Updated: 2023/10/25 19:28:51 by jflorido         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ Expected files   : ft_printf.c
 Allowed functions: malloc, free, write, va_start, va_arg, va_copy, va_end
 --------------------------------------------------------------------------------
 
-Write a function named `ft_printf` that will mimic the real printf but 
+Write a function named `ft_printf` that will mimic the real printf but
 it will manage only the following conversions: s,d and x.
 
 Your function must be declared as follows:
@@ -52,7 +52,7 @@ int	ft_u_nb_len(unsigned int nb)
 	while (nb > 0)
 	{
 		len++;
-		nb /= 16;	
+		nb /= 16;
 	}
 	return (len);
 }
@@ -164,17 +164,17 @@ int ft_printf(const char *str, ... )
 		else
 		{
 			write(1, &str[i], 1);
-			len = len + 1;	
+			len = len + 1;
 		}
 		i++;
 	}
 	va_end(ap);
-	return (len);		
+	return (len);
 }
 int	main(void)
 {
 	ft_printf("%s\n", "toto");
-	ft_printf("Magic %s is %d\n", "number", 42);
+	ft_printf("Magic %s is %d\n", "number", 37);
 	ft_printf("Hexadecimal for %d is %x\n", 42, 42);
 	return (0);
 }
